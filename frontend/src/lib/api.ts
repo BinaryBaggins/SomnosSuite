@@ -1,10 +1,15 @@
-import { PUBLIC_API_BASE_URL } from '$env/static/public';
+import { env } from '$env/dynamic/public';
 
 /**
  * Hilfsfunktion für API-Requests
  */
 export async function api<T>(path: string, options?: RequestInit): Promise<T> {
-	const url = `${PUBLIC_API_BASE_URL}${path}`;
+	const baseUrl = env.PUBLIC_API_BASE_URL;
+	if (!baseUrl) {
+		throw new Error('Missing PUBLIC_API_BASE_URL environment variable.');
+	}
+
+	const url = `${baseUrl}${path}`;
 
 	const res = await fetch(url, {
 		headers: {
