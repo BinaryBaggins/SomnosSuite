@@ -1,0 +1,19 @@
+# Default owner
+* @SapphireFlame96
+
+# Backend
+/backend/ @SapphireFlame96
+
+# Frontend
+/frontend/ @SapphireFlame96
+
+# Docs
+/docs/ @SapphireFlame96
+
+# GitHub workflows
+/.github/workflows/ @SapphireFlame96
+
+# Governance files
+/README.md @SapphireFlame96
+/CONTRIBUTING.md @SapphireFlame96
+/SECURITY.md @SapphireFlame96

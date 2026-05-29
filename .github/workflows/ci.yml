@@ -30,7 +30,14 @@ jobs:
 
       - name: Test
         working-directory: backend
-        run: dotnet test backend.sln --no-build
+        run: dotnet test backend.sln --no-build --collect:"XPlat Code Coverage"
+
+      - name: Upload coverage artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: backend-coverage
+          path: backend/**/TestResults/**/coverage.cobertura.xml
+          if-no-files-found: warn
 
   frontend:
     name: Frontend
