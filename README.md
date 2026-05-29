@@ -37,7 +37,7 @@ The current implementation focuses on the core domain model and a lightweight ap
 ## Prerequisites
 
 - .NET SDK `10.0.300` as pinned in `global.json`
-- Node.js `22.12.0` or newer as pinned in `.nvmrc`
+- Node.js `22.13.0` or newer as pinned in `.nvmrc`
 - npm `10` or newer
 
 ## Backend

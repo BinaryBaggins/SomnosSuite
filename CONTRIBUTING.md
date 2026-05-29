@@ -7,7 +7,7 @@ Thanks for helping improve SomnosSuite.
 Install the required toolchain:
 
 - .NET SDK `10.0.300`
-- Node.js `22.12.0` or newer
+- Node.js `22.13.0` or newer
 - npm `10` or newer
 
 Backend:
