@@ -1,0 +1,97 @@
+# ========================
+# Dependencies
+# ========================
+node_modules/
+
+# ========================
+# Frontend / SvelteKit / Vite
+# ========================
+.svelte-kit/
+.svelte-kit/output/
+dist/
+build/
+*.tsbuildinfo
+frontend/dist/
+frontend/build/
+
+# ========================
+# .NET / ASP.NET Core
+# ========================
+bin/
+obj/
+[Bb]in/
+[Oo]bj/
+*.csproj.user
+*.user
+*.suo
+.vs/
+*.csproj.lscache
+
+# ========================
+# Environment and secrets
+# ========================
+.env
+.env.*
+*.db
+*.sqlite
+*.sqlite3
+
+# Keep examples and templates trackable
+!.env.example
+!.env.*.example
+
+# ========================
+# Editors / IDEs
+# ========================
+.vscode/
+.idea/
+*.swp
+*.bak
+*.tmp
+*.orig
+*.rej
+
+# ========================
+# OS files
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Logs / temp
+# ========================
+*.log
+*.temp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ========================
+# Test and coverage outputs
+# ========================
+coverage/
+*.lcov
+test-results/
+TestResults/
+
+# ========================
+# Native / miscellaneous build artifacts
+# ========================
+.cache/
+*.o
+*.a
+*.so
+*.class
+
+# ========================
+# Project-specific generated outputs
+# ========================
+reports/bin/
+reports/obj/
+converter/bin/
+converter/obj/
+backend/**/bin/
+backend/**/obj/
+
+# Public documentation is intentionally trackable.
+# Do not ignore docs/ or environment example files.

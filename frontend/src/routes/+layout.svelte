@@ -1,0 +1,14 @@
+<script lang="ts">
+	import '../app.css';
+	import favicon from '$lib/assets/_favicon.svg';
+	import NavBar from '$lib/components/NavBar.svelte';
+
+	let { children } = $props();
+</script>
+
+<svelte:head>
+	<link rel="icon" href={favicon} />
+</svelte:head>
+
+<NavBar></NavBar>
+{@render children?.()}
