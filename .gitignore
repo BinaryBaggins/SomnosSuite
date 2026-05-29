@@ -92,6 +92,7 @@ converter/bin/
 converter/obj/
 backend/**/bin/
 backend/**/obj/
+.tools/
 
 # Public documentation is intentionally trackable.
 # Do not ignore docs/ or environment example files.
