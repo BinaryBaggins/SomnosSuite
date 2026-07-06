@@ -116,6 +116,16 @@ type RootTranslation = {
 		 */
 		systemStatus: string;
 	};
+	dashboard: {
+		/**
+		 * D​a​s​h​b​o​a​r​d​ ​|​ ​S​o​m​n​o​s​S​u​i​t​e
+		 */
+		title: string;
+		/**
+		 * W​e​l​c​o​m​e​ ​t​o​ ​t​h​e​ ​S​o​m​n​o​s​S​u​i​t​e​ ​D​a​s​h​b​o​a​r​d
+		 */
+		headline: string;
+	};
 };
 
 export type TranslationFunctions = {
@@ -222,6 +232,16 @@ export type TranslationFunctions = {
 		 * System status
 		 */
 		systemStatus: () => LocalizedString;
+	};
+	dashboard: {
+		/**
+		 * Dashboard | SomnosSuite
+		 */
+		title: () => LocalizedString;
+		/**
+		 * Welcome to the SomnosSuite Dashboard
+		 */
+		headline: () => LocalizedString;
 	};
 };
 

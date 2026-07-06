@@ -8,13 +8,13 @@ const de = {
 	},
 	login: {
 		title: 'Anmeldung | SomnosSuite',
-		internalLabel: 'SomnosSuite Intern',
-		headline: 'Operations-Portal fuer Teams im Schlafprogramm.',
+		internalLabel: 'SomnosSuite',
+		headline: 'Kontrollportal fuer Nutzier-Betäubungsabläufe.',
 		subline:
-			'Verwalte Interventionen, pruefe naechstliche Trends und koordiniere Patienten-Nachverfolgung in einem sicheren Arbeitsbereich.',
-		benefitSecure: 'Geschuetzte Datenfluesse und protokollierte Zugriffe',
-		benefitDashboards: 'Gemeinsame Dashboards fuer Behandlungs- und Forschungsteams',
-		benefitTriage: 'Schnelle Incident-Triage mit rollenbasierten Ansichten',
+			'Erfasse Tiere, Betäubungsgeräte, Betäubungsprüfungen, Ergebnisse und Audit-Metadaten in einem sicheren Dokumentationsbereich.',
+		benefitSecure: 'Manipulationssichere Datensätze mit protokollierten Benutzeraktionen',
+		benefitDashboards: 'Operative Dashboards für Linien-Teams und Compliance-Reporting',
+		benefitTriage: 'Schnelle Ausnahmebearbeitung mit rollenbasierten Ansichten',
 		envLabel: 'Staging',
 		buildLabel: 'Build 0.1.0',
 		signInHeading: 'Anmelden',
@@ -23,13 +23,17 @@ const de = {
 		workEmailPlaceholder: 'name@firma.com',
 		passwordLabel: 'Passwort',
 		passwordPlaceholder: 'Passwort eingeben',
-		rememberDevice: 'Dieses Geraet merken',
+		rememberDevice: 'Dieses Gerät merken',
 		forgotPassword: 'Passwort vergessen?',
 		signInButton: 'Bei SomnosSuite anmelden',
 		orLabel: 'oder',
 		ssoButton: 'Mit SSO fortfahren',
 		needAccess: 'Zugang anfragen? Admin kontaktieren',
 		systemStatus: 'Systemstatus'
+	},
+	dashboard: {
+		title: 'Dashboard | SomnosSuite',
+		headline: 'Willkommen im Dashboard für Betäubungskontrolle und Dokumentation'
 	}
 } satisfies Translation;
 

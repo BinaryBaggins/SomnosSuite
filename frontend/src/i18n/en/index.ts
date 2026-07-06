@@ -8,13 +8,13 @@ const en = {
 	},
 	login: {
 		title: 'Login | SomnosSuite',
-		internalLabel: 'SomnosSuite Internal',
-		headline: 'Operations portal for sleep program teams.',
+		internalLabel: 'SomnosSuite',
+		headline: 'Control portal for livestock stunning workflows.',
 		subline:
-			'Manage interventions, review nightly trends, and coordinate patient follow-ups in one secure workspace.',
-		benefitSecure: 'Protected data flows and audited access',
-		benefitDashboards: 'Shared dashboards for care and research teams',
-		benefitTriage: 'Fast incident triage with role-based views',
+			'Record animals, stunning devices, stunning checks, outcomes, and audit metadata in one secure documentation workspace.',
+		benefitSecure: 'Tamper-resistant records with audited user actions',
+		benefitDashboards: 'Operational dashboards for line teams and compliance reporting',
+		benefitTriage: 'Fast exception handling with role-based views',
 		envLabel: 'Staging',
 		buildLabel: 'Build 0.1.0',
 		signInHeading: 'Sign in',
@@ -30,6 +30,10 @@ const en = {
 		ssoButton: 'Continue with SSO',
 		needAccess: 'Need access? Contact admin',
 		systemStatus: 'System status'
+	},
+	dashboard: {
+		title: 'Dashboard | SomnosSuite',
+		headline: 'Welcome to the stunning control and documentation dashboard'
 	}
 } satisfies BaseTranslation;
 
