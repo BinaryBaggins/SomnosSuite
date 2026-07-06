@@ -20,9 +20,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language:
-          - csharp
-          - javascript-typescript
+        include:
+          - language: csharp
+            build-mode: manual
+          - language: javascript-typescript
+            build-mode: none
+          - language: actions
+            build-mode: none
 
     steps:
       - name: Checkout repository
@@ -32,6 +36,8 @@ jobs:
         uses: github/codeql-action/init@8aad20d150bbac5944a9f9d289da16a4b0d87c1e # v4.36.2
         with:
           languages: ${{ matrix.language }}
+          build-mode: ${{ matrix.build-mode }}
+          dependency-caching: true
 
       - name: Setup .NET
         if: matrix.language == 'csharp'
@@ -48,10 +54,6 @@ jobs:
         if: matrix.language == 'csharp'
         working-directory: backend
         run: dotnet build backend.sln --no-restore
-
-      - name: Autobuild
-        if: matrix.language == 'javascript-typescript'
-        uses: github/codeql-action/autobuild@8aad20d150bbac5944a9f9d289da16a4b0d87c1e # v4.36.2
 
       - name: Perform CodeQL Analysis
         uses: github/codeql-action/analyze@8aad20d150bbac5944a9f9d289da16a4b0d87c1e # v4.36.2
