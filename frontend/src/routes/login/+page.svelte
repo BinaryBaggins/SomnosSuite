@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import LL from '../../i18n/i18n-svelte';
 	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 </script>
@@ -129,7 +130,7 @@
 							<span>{$LL.login.rememberDevice()}</span>
 						</label>
 						<a
-							href="/about"
+							href={resolve('/about')}
 							class="text-xs font-semibold text-cyan-800 hover:underline"
 						>
 							{$LL.login.forgotPassword()}
@@ -163,10 +164,16 @@
 				</button>
 
 				<footer class="mt-4 flex flex-wrap items-center justify-between gap-2">
-					<a href="/about" class="text-xs font-semibold text-cyan-800 hover:underline">
+					<a
+						href={resolve('/about')}
+						class="text-xs font-semibold text-cyan-800 hover:underline"
+					>
 						{$LL.login.needAccess()}
 					</a>
-					<a href="/about" class="text-xs font-semibold text-cyan-800 hover:underline">
+					<a
+						href={resolve('/about')}
+						class="text-xs font-semibold text-cyan-800 hover:underline"
+					>
 						{$LL.login.systemStatus()}
 					</a>
 				</footer>
