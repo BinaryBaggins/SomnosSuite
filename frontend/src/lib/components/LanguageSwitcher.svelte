@@ -17,15 +17,18 @@
 </script>
 
 <div
-	class="inline-flex items-center gap-2 rounded-xl border border-slate-300/90 bg-white/85 px-2.5 py-1.5 shadow-sm backdrop-blur"
+	class="inline-flex items-center gap-2 rounded-xl border border-slate-900/15 bg-white/95 px-2.5 py-1.5 shadow-[0_10px_24px_rgba(15,23,42,0.12),0_2px_8px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-slate-200/15 dark:bg-slate-950/95 dark:shadow-[0_14px_30px_rgba(2,6,23,0.6),0_2px_8px_rgba(14,165,233,0.15)]"
 >
-	<label for="language" class="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-600">
+	<label
+		for="language"
+		class="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-700 dark:text-slate-200"
+	>
 		{$LL.common.languageLabel()}
 	</label>
 	<div class="relative inline-block">
 		<select
 			id="language"
-			class="inline-block w-fit min-w-0 appearance-none rounded-md border border-slate-300 bg-white bg-none py-1 pl-2 pr-7 text-xs font-semibold text-slate-700 focus:border-cyan-700 focus:ring-0"
+			class="inline-block w-fit min-w-0 appearance-none rounded-md border border-slate-400 bg-white bg-none py-1 pl-2 pr-7 text-xs font-semibold text-slate-900 focus:border-cyan-900 focus:ring-0 dark:border-slate-500 dark:bg-slate-950 dark:text-slate-100 dark:focus:border-cyan-300"
 			on:change={handleLanguageChange}
 			value={$locale}
 		>
@@ -39,7 +42,7 @@
 			aria-hidden="true"
 			viewBox="0 0 20 20"
 			fill="currentColor"
-			class="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-slate-500"
+			class="pointer-events-none absolute right-2 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-slate-600 dark:text-slate-300"
 		>
 			<path
 				fill-rule="evenodd"

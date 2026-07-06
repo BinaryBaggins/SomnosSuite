@@ -1,6 +1,7 @@
 <script>
 	import { resolve } from '$app/paths';
 	import favicon from '$lib/assets/_favicon.svg';
+	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 
 	export let siteName = 'SomnosSuite';
 	/** @type {'/' | '/about'} */
@@ -11,7 +12,7 @@
 	aria-label="Main Navigation"
 	class="shadow-dark-mild relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 lg:py-4 dark:bg-neutral-700"
 >
-	<div class="flex w-full flex-wrap items-center justify-between px-3">
+	<div class="flex w-full flex-wrap items-center justify-between gap-3 px-3">
 		<!-- Logo -->
 		<a class="mx-2 my-1 flex items-center lg:mt-0 lg:mb-0" href={resolve(href)}>
 			<img src={favicon} class="me-2 h-10" alt="Logo" loading="lazy" />
@@ -35,5 +36,7 @@
 				>
 			</li>
 		</ul>
+
+		<ThemeToggle />
 	</div>
 </nav>

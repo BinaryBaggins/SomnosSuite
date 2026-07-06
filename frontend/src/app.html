@@ -3,6 +3,18 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<script>
+			(() => {
+				const key = 'somnos-theme';
+				const storedTheme = localStorage.getItem(key);
+				const isDark =
+					storedTheme === 'dark' ||
+					(storedTheme !== 'light' &&
+						window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+				document.documentElement.classList.toggle('dark', isDark);
+			})();
+		</script>
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
