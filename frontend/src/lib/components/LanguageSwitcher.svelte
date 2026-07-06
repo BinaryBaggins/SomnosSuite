@@ -16,7 +16,9 @@
 	};
 </script>
 
-<div class="inline-flex items-center gap-2 rounded-xl border border-slate-300/90 bg-white/85 px-2.5 py-1.5 shadow-sm backdrop-blur">
+<div
+	class="inline-flex items-center gap-2 rounded-xl border border-slate-300/90 bg-white/85 px-2.5 py-1.5 shadow-sm backdrop-blur"
+>
 	<label for="language" class="text-[11px] font-bold uppercase tracking-[0.08em] text-slate-600">
 		{$LL.common.languageLabel()}
 	</label>
@@ -27,7 +29,7 @@
 			on:change={handleLanguageChange}
 			value={$locale}
 		>
-			{#each availableLocales as code}
+			{#each availableLocales as code (code)}
 				<option value={code}>
 					{code === 'en' ? $LL.common.localeOptionEn() : $LL.common.localeOptionDe()}
 				</option>

@@ -23,11 +23,15 @@
 		aria-label="SomnosSuite Login"
 		class="relative mx-auto my-auto grid w-full max-w-6xl items-center gap-6 lg:grid-cols-[1.05fr_minmax(320px,460px)] [@media(max-height:800px)]:gap-4"
 	>
-		<div class="grid content-center gap-4 px-1 py-2 lg:p-6 [@media(max-height:800px)]:gap-2 [@media(max-height:800px)]:py-1">
+		<div
+			class="grid content-center gap-4 px-1 py-2 lg:p-6 [@media(max-height:800px)]:gap-2 [@media(max-height:800px)]:py-1"
+		>
 			<p class="m-0 text-xs font-bold uppercase tracking-[0.18em] text-cyan-700">
 				{$LL.login.internalLabel()}
 			</p>
-			<h1 class="m-0 max-w-[19ch] font-serif text-4xl leading-[0.95] sm:text-5xl lg:text-6xl [@media(max-height:800px)]:lg:text-5xl">
+			<h1
+				class="m-0 max-w-[19ch] font-serif text-4xl leading-[0.95] sm:text-5xl lg:text-6xl [@media(max-height:800px)]:lg:text-5xl"
+			>
 				{$LL.login.headline()}
 			</h1>
 			<p class="m-0 max-w-2xl text-base leading-relaxed text-slate-700 sm:text-lg">
@@ -124,7 +128,10 @@
 							/>
 							<span>{$LL.login.rememberDevice()}</span>
 						</label>
-						<a href="/about" class="text-xs font-semibold text-cyan-800 hover:underline">
+						<a
+							href="/about"
+							class="text-xs font-semibold text-cyan-800 hover:underline"
+						>
 							{$LL.login.forgotPassword()}
 						</a>
 					</div>
@@ -137,7 +144,10 @@
 					</button>
 				</form>
 
-				<div aria-hidden="true" class="my-4 grid grid-cols-[1fr_auto_1fr] items-center gap-3">
+				<div
+					aria-hidden="true"
+					class="my-4 grid grid-cols-[1fr_auto_1fr] items-center gap-3"
+				>
 					<span class="h-px bg-slate-300"></span>
 					<p class="m-0 text-[11px] font-bold uppercase tracking-[0.09em] text-slate-500">
 						{$LL.login.orLabel()}

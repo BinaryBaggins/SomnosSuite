@@ -1,4 +1,4 @@
-import type { BaseTranslation } from '../i18n-types'
+import type { BaseTranslation } from '../i18n-types';
 
 const en = {
 	common: {
@@ -31,6 +31,6 @@ const en = {
 		needAccess: 'Need access? Contact admin',
 		systemStatus: 'System status'
 	}
-} satisfies BaseTranslation
+} satisfies BaseTranslation;
 
-export default en
+export default en;
