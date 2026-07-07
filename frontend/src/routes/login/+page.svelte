@@ -14,7 +14,7 @@
 >
 	<div
 		aria-hidden="true"
-		class="pointer-events-none absolute left-1/2 top-24 h-[58vh] w-[min(980px,90vw)] -translate-x-1/2 -rotate-3 rounded-[42px] bg-gradient-to-br from-sky-900/15 to-cyan-500/10 blur-[2px] dark:from-cyan-200/15 dark:to-sky-300/10"
+		class="pointer-events-none absolute left-1/2 top-24 h-[58vh] w-[min(980px,90vw)] -translate-x-1/2 -rotate-3 rounded-[42px] bg-linear-to-br from-sky-900/15 to-cyan-500/10 blur-[2px] dark:from-cyan-200/15 dark:to-sky-300/10"
 	></div>
 
 	<div class="absolute right-4 top-4 z-20 flex items-center gap-2 sm:right-6 sm:top-6">
@@ -49,21 +49,21 @@
 				<li class="flex items-center gap-3 text-sm text-slate-800 dark:text-slate-200">
 					<span
 						aria-hidden="true"
-						class="h-2.5 w-2.5 shrink-0 rounded-full bg-gradient-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
+						class="h-2.5 w-2.5 shrink-0 rounded-full bg-linear-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
 					></span>
 					<span>{$LL.login.benefitSecure()}</span>
 				</li>
 				<li class="flex items-center gap-3 text-sm text-slate-800 dark:text-slate-200">
 					<span
 						aria-hidden="true"
-						class="h-2.5 w-2.5 shrink-0 rounded-full bg-gradient-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
+						class="h-2.5 w-2.5 shrink-0 rounded-full bg-linear-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
 					></span>
 					<span>{$LL.login.benefitDashboards()}</span>
 				</li>
 				<li class="flex items-center gap-3 text-sm text-slate-800 dark:text-slate-200">
 					<span
 						aria-hidden="true"
-						class="h-2.5 w-2.5 shrink-0 rounded-full bg-gradient-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
+						class="h-2.5 w-2.5 shrink-0 rounded-full bg-linear-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
 					></span>
 					<span>{$LL.login.benefitTriage()}</span>
 				</li>
@@ -155,7 +155,7 @@
 
 					<button
 						type="submit"
-						class="mt-1 h-11 rounded-xl bg-gradient-to-r from-cyan-700 to-sky-700 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
+						class="mt-1 h-11 rounded-xl bg-linear-to-r from-cyan-700 to-sky-700 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
 					>
 						{$LL.login.signInButton()}
 					</button>
