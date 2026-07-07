@@ -2,6 +2,7 @@
 	import { resolve } from '$app/paths';
 	import favicon from '$lib/assets/_favicon.svg';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+	import Avatar from './Avatar.svelte';
 	import LanguageSwitcher from './LanguageSwitcher.svelte';
 
 	export let siteName = 'SomnosSuite';
@@ -40,5 +41,6 @@
 
 		<ThemeToggle />
 		<LanguageSwitcher />
+		<Avatar />
 	</div>
 </nav>
