@@ -24,7 +24,7 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{#if $page.url.pathname !== '/login'}
+{#if $page.url.pathname !== '/login' && $page.url.pathname !== '/app/station'}
 	<NavBar></NavBar>
 {/if}
 {@render children?.()}
