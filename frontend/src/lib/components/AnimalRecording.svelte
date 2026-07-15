@@ -42,22 +42,20 @@
 	}
 </script>
 
-<main
-	class="grid min-h-screen gap-6 bg-slate-100 p-6 text-slate-900 dark:bg-slate-950 dark:text-slate-100"
->
-	<header class="rounded-3xl bg-white p-6 shadow dark:bg-slate-900">
-		<p class="text-sm font-bold uppercase tracking-wide text-cyan-700">Station</p>
+<main class="grid min-h-screen gap-6 bg-background p-6 text-foreground">
+	<header class="rounded-3xl border border-border bg-card p-6 text-card-foreground shadow-sm">
+		<p class="text-sm font-bold uppercase tracking-wide text-primary">Station</p>
 
 		<h1 class="text-4xl font-bold">
 			{productionSession.station}
 		</h1>
 
-		<p class="mt-2">
+		<p class="mt-2 text-muted-foreground">
 			Session: {productionSession.animalKind}
 		</p>
 	</header>
 
-	<section class="rounded-3xl bg-white p-8 shadow dark:bg-slate-900">
+	<section class="rounded-3xl border border-border bg-card p-8 text-card-foreground shadow-sm">
 		<h2 class="text-2xl font-bold">Aktuelles Tier</h2>
 
 		<div class="mt-6 grid gap-4 text-xl">
@@ -89,26 +87,26 @@
 		<div class="mt-10 grid grid-cols-2 gap-6">
 			<button
 				onclick={() => recordOutcome('Good')}
-				class="h-32 rounded-3xl bg-green-700 text-4xl font-bold text-white"
+				class="h-32 rounded-3xl bg-success text-4xl font-bold text-success-foreground shadow-sm"
 			>
 				GOOD
 			</button>
 
 			<button
 				onclick={() => recordOutcome('Bad')}
-				class="h-32 rounded-3xl bg-red-700 text-4xl font-bold text-white"
+				class="h-32 rounded-3xl bg-destructive text-4xl font-bold text-destructive-foreground shadow-sm"
 			>
 				BAD
 			</button>
 		</div>
 	</section>
 
-	<section class="rounded-3xl bg-white p-6 shadow dark:bg-slate-900">
+	<section class="rounded-3xl border border-border bg-card p-6 text-card-foreground shadow-sm">
 		<h2 class="text-xl font-bold">Nächste Tiere</h2>
 
 		<table class="mt-4 w-full">
 			<thead>
-				<tr class="text-left">
+				<tr class="text-left text-muted-foreground">
 					<th>Ohrmarke</th>
 					<th>Tierart</th>
 				</tr>
@@ -125,7 +123,9 @@
 		</table>
 	</section>
 
-	<button class="h-20 rounded-3xl bg-slate-800 text-2xl font-bold text-white">
+	<button
+		class="h-20 rounded-3xl bg-secondary text-2xl font-bold text-secondary-foreground shadow-sm"
+	>
 		Tagesabschluss
 	</button>
 </main>
