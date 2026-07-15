@@ -57,6 +57,6 @@
 
 		<ThemeToggle />
 		<LanguageSwitcher />
-		<UserMenu name="Max Mustermann" fallback="MM" image="" align="start" {items} />
+		<UserMenu name="Max Mustermann" fallback="MM" image="" {items} />
 	</div>
 </nav>
