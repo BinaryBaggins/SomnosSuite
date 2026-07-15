@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import darkModeIcon from '$lib/assets/asleep-filled-svgrepo-com.svg';
-	import lightModeIcon from '$lib/assets/sunny-svgrepo-com.svg';
+	import { Sun, Moon } from '@lucide/svelte/icons';
+	import { Button } from '$lib/components/ui/button';
 
 	type Theme = 'light' | 'dark';
 	const THEME_STORAGE_KEY = 'somnos-theme';
@@ -41,16 +41,16 @@
 	}
 </script>
 
-<button
-	type="button"
+<Button
 	onclick={toggleTheme}
-	class="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-slate-900/15 bg-white/95 text-slate-900 shadow-[0_10px_24px_rgba(15,23,42,0.12),0_2px_8px_rgba(15,23,42,0.08)] backdrop-blur-xl transition hover:bg-slate-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cyan-900 dark:border-slate-200/15 dark:bg-slate-950/95 dark:text-slate-100 dark:shadow-[0_14px_30px_rgba(2,6,23,0.6),0_2px_8px_rgba(14,165,233,0.15)] dark:hover:bg-slate-800 dark:focus-visible:outline-cyan-300"
+	size="icon"
+	variant="outline"
 	aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
 	title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
 >
 	{#if theme === 'dark'}
-		<img src={lightModeIcon} class="h-5 w-5" alt="" aria-hidden="true" />
+		<Sun />
 	{:else}
-		<img src={darkModeIcon} class="h-5 w-5" alt="" aria-hidden="true" />
+		<Moon fill="currentColor" />
 	{/if}
-</button>
+</Button>

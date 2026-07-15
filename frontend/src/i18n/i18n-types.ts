@@ -34,7 +34,7 @@ type RootTranslation = {
 		/**
 		 * S​o​m​n​o​s​S​u​i​t​e​ ​I​n​t​e​r​n​a​l
 		 */
-		internalLabel: string;
+		applicationName: string;
 		/**
 		 * O​p​e​r​a​t​i​o​n​s​ ​p​o​r​t​a​l​ ​f​o​r​ ​s​l​e​e​p​ ​p​r​o​g​r​a​m​ ​t​e​a​m​s​.
 		 */
@@ -151,7 +151,7 @@ export type TranslationFunctions = {
 		/**
 		 * SomnosSuite Internal
 		 */
-		internalLabel: () => LocalizedString;
+		applicationName: () => LocalizedString;
 		/**
 		 * Operations portal for sleep program teams.
 		 */
