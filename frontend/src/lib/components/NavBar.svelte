@@ -1,17 +1,18 @@
-<script>
+<script lang="ts">
 	import { resolve } from '$app/paths';
 	import favicon from '$lib/assets/_favicon.svg';
 	import ThemeToggle from '$lib/components/ui/theme-toggle/theme-toggle.svelte';
 	import UserMenu from '$lib/components/ui/user-menu/user-menu.svelte';
+	import type { UserMenuItem } from '$lib/components/ui/user-menu/user-menu.svelte';
 	import LanguageSwitcher from '$lib/components/ui/language-switcher/app-language-switcher.svelte';
 	import SettingsIcon from '@lucide/svelte/icons/settings';
 	import LogOutIcon from '@lucide/svelte/icons/log-out';
 
 	export let siteName = 'SomnosSuite';
-	/** @type {'/' | '/about'} */
-	export let href = '/';
+	/** @type {'/' | '/dashboard'} */
+	export let href: '/' | '/dashboard' = '/dashboard';
 
-	const items = [
+	const items: UserMenuItem[] = [
 		{
 			label: 'Settings',
 			icon: SettingsIcon,
@@ -42,8 +43,8 @@
 			<li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
 				<a
 					class="text-slate-700 transition duration-200 hover:text-slate-900 focus:text-slate-900 active:text-slate-900 lg:px-2 dark:text-slate-300 dark:hover:text-slate-100 dark:focus:text-slate-100 dark:active:text-slate-100"
-					href={resolve('/')}
-					data-twe-nav-link-ref>Overview</a
+					href={resolve('/dashboard')}
+					data-twe-nav-link-ref>Dashboard</a
 				>
 			</li>
 			<li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>

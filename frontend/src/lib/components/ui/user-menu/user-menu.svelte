@@ -63,9 +63,17 @@
 <DropdownMenu.Root>
 	<DropdownMenu.Trigger>
 		{#snippet child({ props })}
-			<Button {...props} variant="outline" size="icon" class={className}>
+			<Button
+				{...props}
+				variant="ghost"
+				size="icon"
+				class={className}
+				aria-label="Open user menu"
+			>
 				<Avatar.Root>
-					<Avatar.Image src={image} alt={name} />
+					{#if image}
+						<Avatar.Image src={image} alt={name} />
+					{/if}
 					<Avatar.Fallback>
 						{@const FallbackIcon = fallbackIcon}
 						{#if FallbackIcon}
