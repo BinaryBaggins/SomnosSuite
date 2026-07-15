@@ -3,6 +3,13 @@
 	import LL from '../../i18n/i18n-svelte';
 	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
 	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+
+	import { Card } from '$lib/components/ui/card';
+	import { Button } from '$lib/components/ui/button';
+	import { Input } from '$lib/components/ui/input';
+	import { Label } from '$lib/components/ui/label';
+	import { Checkbox } from '$lib/components/ui/checkbox';
+	import { Badge } from '$lib/components/ui/badge';
 </script>
 
 <svelte:head>
@@ -71,23 +78,23 @@
 		</div>
 
 		<div class="grid items-center">
-			<article
+			<Card
 				aria-label="Sign in form"
-				class="rounded-3xl border border-slate-900/15 bg-white/95 p-5 shadow-[0_26px_56px_rgba(15,23,42,0.12),0_3px_10px_rgba(15,23,42,0.08)] backdrop-blur-xl dark:border-slate-200/15 dark:bg-slate-950/95 dark:shadow-[0_30px_80px_rgba(2,6,23,0.65),0_2px_8px_rgba(14,165,233,0.15)] sm:p-7 [@media(max-height:800px)]:sm:p-5"
+				class="rounded-3xl p-5 shadow-xl backdrop-blur-xl sm:p-7"
 			>
 				<header>
 					<div class="mb-3 flex items-center justify-between gap-3">
-						<span
+						<Badge
 							title="Current environment"
-							class="inline-flex items-center rounded-full bg-cyan-900 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white dark:bg-cyan-200 dark:text-slate-950"
+							class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide"
 						>
 							{$LL.login.envLabel()}
-						</span>
-						<span
+						</Badge>
+						<Badge
 							class="inline-flex items-center rounded-full bg-slate-800 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white dark:bg-slate-200 dark:text-slate-950"
 						>
 							{$LL.login.buildLabel()}
-						</span>
+						</Badge>
 					</div>
 					<h2 class="m-0 font-serif text-4xl text-slate-900 dark:text-slate-100">
 						{$LL.login.signInHeading()}
@@ -98,53 +105,46 @@
 				</header>
 
 				<form method="post" action="/login" class="grid gap-2.5">
-					<label
+					<Label
 						for="email"
 						class="text-xs font-bold tracking-wide text-slate-800 dark:text-slate-200"
 					>
 						{$LL.login.workEmailLabel()}
-					</label>
-					<!-- svelte-ignore a11y_autofocus -->
-					<input
+					</Label>
+					<Input
 						id="email"
-						type="email"
 						name="email"
+						type="email"
 						autocomplete="email"
 						placeholder={$LL.login.workEmailPlaceholder()}
-						required
-						autofocus
-						class="h-11 w-full rounded-xl border border-slate-400 bg-white px-3 text-sm text-slate-950 placeholder:text-slate-600 focus:border-cyan-900 focus:ring-0 dark:border-slate-500 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-300 dark:focus:border-cyan-300"
+						class="h-11 rounded-xl border border-slate-400 bg-white px-3 text-sm text-slate-950 placeholder:text-slate-600 focus:border-cyan-900 focus:ring-0 dark:border-slate-500 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-300 dark:focus:border-cyan-300"
 					/>
 
-					<label
-						for="password"
-						class="text-xs font-bold tracking-wide text-slate-800 dark:text-slate-200"
-					>
+					<Label for="password" class="text-xs font-bold tracking-wide">
 						{$LL.login.passwordLabel()}
-					</label>
-					<input
+					</Label>
+					<Input
 						id="password"
 						type="password"
 						name="password"
 						autocomplete="current-password"
 						placeholder={$LL.login.passwordPlaceholder()}
 						required
-						class="h-11 w-full rounded-xl border border-slate-400 bg-white px-3 text-sm text-slate-950 placeholder:text-slate-600 focus:border-cyan-900 focus:ring-0 dark:border-slate-500 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-300 dark:focus:border-cyan-300"
+						class="h-11 rounded-xl border border-slate-400 bg-white px-3 text-sm text-slate-950 placeholder:text-slate-600 focus:border-cyan-900 focus:ring-0 dark:border-slate-500 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-300 dark:focus:border-cyan-300"
 					/>
 
 					<div class="mb-1 mt-1 flex items-center justify-between gap-3">
-						<label
+						<Label
 							for="remember"
 							class="inline-flex items-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-200"
 						>
-							<input
+							<Checkbox
 								id="remember"
-								type="checkbox"
 								name="remember"
 								class="h-4 w-4 rounded border-slate-400 text-cyan-700 accent-cyan-700 focus:ring-cyan-700 dark:border-slate-500 dark:bg-slate-900 dark:focus:ring-cyan-400"
 							/>
 							<span>{$LL.login.rememberDevice()}</span>
-						</label>
+						</Label>
 						<a
 							href={resolve('/about')}
 							class="text-xs font-semibold text-cyan-900 hover:underline dark:text-cyan-200"
@@ -153,12 +153,12 @@
 						</a>
 					</div>
 
-					<button
+					<Button
 						type="submit"
 						class="mt-1 h-11 rounded-xl bg-linear-to-r from-cyan-700 to-sky-700 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
 					>
 						{$LL.login.signInButton()}
-					</button>
+					</Button>
 				</form>
 
 				<div
@@ -174,12 +174,9 @@
 					<span class="h-px bg-slate-300 dark:bg-slate-700"></span>
 				</div>
 
-				<button
-					type="button"
-					class="h-11 w-full rounded-xl border border-slate-400 bg-white text-sm font-bold text-slate-900 hover:bg-slate-100 dark:border-slate-500 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800"
-				>
+				<Button type="button" variant="outline" class="h-11 w-full rounded-xl">
 					{$LL.login.ssoButton()}
-				</button>
+				</Button>
 
 				<footer class="mt-4 flex flex-wrap items-center justify-between gap-2">
 					<a
@@ -195,7 +192,7 @@
 						{$LL.login.systemStatus()}
 					</a>
 				</footer>
-			</article>
+			</Card>
 		</div>
 	</section>
 </main>
