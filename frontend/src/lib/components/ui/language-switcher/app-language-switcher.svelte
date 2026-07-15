@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { LanguageSwitcher } from '$lib/components/ui/language-switcher';
 
-	import LL, { locale, setLocale } from '../../i18n/i18n-svelte';
-	import { loadLocale } from '../../i18n/i18n-util.sync';
-	import type { Locales } from '../../i18n/i18n-types';
-	import { persistLocale } from '../i18n/locale';
+	import LL, { locale, setLocale } from '../../../../i18n/i18n-svelte';
+	import { loadLocale } from '../../../../i18n/i18n-util.sync';
+	import type { Locales } from '../../../../i18n/i18n-types';
+	import { persistLocale } from '../../../i18n/locale';
 
 	// The current locale is stored in a Svelte store, so we can subscribe to it
 	// and reactively update the component when it changes

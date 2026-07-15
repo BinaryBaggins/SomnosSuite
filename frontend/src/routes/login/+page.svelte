@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import LL from '../../i18n/i18n-svelte';
-	import LanguageSwitcher from '$lib/components/LanguageSwitcher.svelte';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+	import LanguageSwitcher from '$lib/components/ui/language-switcher/app-language-switcher.svelte';
+	import ThemeToggle from '$lib/components/ui/theme-toggle/theme-toggle.svelte';
 
 	import { Card } from '$lib/components/ui/card';
 	import { Button } from '$lib/components/ui/button';

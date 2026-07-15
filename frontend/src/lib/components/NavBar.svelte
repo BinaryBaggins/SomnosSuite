@@ -1,13 +1,29 @@
 <script>
 	import { resolve } from '$app/paths';
 	import favicon from '$lib/assets/_favicon.svg';
-	import ThemeToggle from '$lib/components/ThemeToggle.svelte';
-	import Avatar from './Avatar.svelte';
-	import LanguageSwitcher from './LanguageSwitcher.svelte';
+	import ThemeToggle from '$lib/components/ui/theme-toggle/theme-toggle.svelte';
+	import UserMenu from '$lib/components/ui/user-menu/user-menu.svelte';
+	import LanguageSwitcher from '$lib/components/ui/language-switcher/app-language-switcher.svelte';
+	import SettingsIcon from '@lucide/svelte/icons/settings';
+	import LogOutIcon from '@lucide/svelte/icons/log-out';
 
 	export let siteName = 'SomnosSuite';
 	/** @type {'/' | '/about'} */
 	export let href = '/';
+
+	const items = [
+		{
+			label: 'Settings',
+			icon: SettingsIcon,
+			onSelect: () => console.log('settings')
+		},
+		{
+			label: 'Log out',
+			icon: LogOutIcon,
+			separator: true,
+			onSelect: () => console.log('logout')
+		}
+	];
 </script>
 
 <nav
@@ -41,6 +57,6 @@
 
 		<ThemeToggle />
 		<LanguageSwitcher />
-		<Avatar />
+		<UserMenu name="Max Mustermann" fallback="MM" image="" align="start" {items} />
 	</div>
 </nav>
