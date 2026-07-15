@@ -42,9 +42,11 @@
 	}: LanguageSwitcherProps = $props();
 
 	// set default code if there isn't one selected
-	if (value === '') {
-		value = languages[0].code;
-	}
+	$effect(() => {
+		if (value === '' && languages.length > 0) {
+			value = languages[0].code;
+		}
+	});
 </script>
 
 <DropdownMenu.Root>
