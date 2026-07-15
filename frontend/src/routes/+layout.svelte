@@ -1,11 +1,10 @@
 <script lang="ts">
 	import '../app.css';
 	import { browser } from '$app/environment';
-	import { page } from '$app/stores';
 	import { setLocale } from '../i18n/i18n-svelte';
 	import { loadLocale } from '../i18n/i18n-util.sync';
 	import { defaultLocale, getPreferredLocale, persistLocale } from '$lib/i18n/locale';
-	import favicon from '$lib/assets/_favicon.svg';
+	import favicon from '$lib/assets/favicon.svg';
 	import NavBar from '$lib/components/NavBar.svelte';
 
 	const initialLocale = browser ? getPreferredLocale() : defaultLocale;
@@ -24,7 +23,6 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{#if $page.url.pathname !== '/login' && $page.url.pathname !== '/app/station'}
-	<NavBar></NavBar>
-{/if}
+<NavBar></NavBar>
+
 {@render children?.()}

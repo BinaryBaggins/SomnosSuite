@@ -8,7 +8,7 @@ const en = {
 	},
 	login: {
 		title: 'Login | SomnosSuite',
-		internalLabel: 'SomnosSuite',
+		applicationName: 'SomnosSuite',
 		headline: 'Control portal for livestock stunning workflows.',
 		subline:
 			'Record animals, stunning devices, stunning checks, outcomes, and audit metadata in one secure documentation workspace.',

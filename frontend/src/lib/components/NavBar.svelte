@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import favicon from '$lib/assets/_favicon.svg';
+	import favicon from '$lib/assets/favicon.svg';
 	import ThemeToggle from '$lib/components/ui/theme-toggle/theme-toggle.svelte';
 	import UserMenu from '$lib/components/ui/user-menu/user-menu.svelte';
 	import type { UserMenuItem } from '$lib/components/ui/user-menu/user-menu.svelte';
@@ -52,6 +52,20 @@
 					class="text-slate-700 transition duration-200 hover:text-slate-900 focus:text-slate-900 active:text-slate-900 lg:px-2 dark:text-slate-300 dark:hover:text-slate-100 dark:focus:text-slate-100 dark:active:text-slate-100"
 					href={resolve('/about')}
 					data-twe-nav-link-ref>About</a
+				>
+			</li>
+			<li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+				<a
+					class="text-slate-700 transition duration-200 hover:text-slate-900 focus:text-slate-900 active:text-slate-900 lg:px-2 dark:text-slate-300 dark:hover:text-slate-100 dark:focus:text-slate-100 dark:active:text-slate-100"
+					href={resolve('/login')}
+					data-twe-nav-link-ref>Login</a
+				>
+			</li>
+			<li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+				<a
+					class="text-slate-700 transition duration-200 hover:text-slate-900 focus:text-slate-900 active:text-slate-900 lg:px-2 dark:text-slate-300 dark:hover:text-slate-100 dark:focus:text-slate-100 dark:active:text-slate-100"
+					href={resolve('/app/station')}
+					data-twe-nav-link-ref>Station</a
 				>
 			</li>
 		</ul>

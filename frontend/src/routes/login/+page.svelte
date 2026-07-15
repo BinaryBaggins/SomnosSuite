@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import LL from '../../i18n/i18n-svelte';
-	import LanguageSwitcher from '$lib/components/ui/language-switcher/app-language-switcher.svelte';
-	import ThemeToggle from '$lib/components/ui/theme-toggle/theme-toggle.svelte';
 
 	import { Card } from '$lib/components/ui/card';
 	import { Button } from '$lib/components/ui/button';
@@ -10,64 +8,71 @@
 	import { Label } from '$lib/components/ui/label';
 	import { Checkbox } from '$lib/components/ui/checkbox';
 	import { Badge } from '$lib/components/ui/badge';
+
+	import favicon from '$lib/assets/favicon.svg';
 </script>
 
 <svelte:head>
 	<title>{$LL.login.title()}</title>
 </svelte:head>
 
-<main
-	class="relative grid min-h-screen place-items-center overflow-hidden px-4 py-6 text-slate-900 dark:text-slate-100 sm:px-6 sm:py-8 [@media(max-height:800px)]:py-3"
->
-	<div
-		aria-hidden="true"
-		class="pointer-events-none absolute left-1/2 top-24 h-[58vh] w-[min(980px,90vw)] -translate-x-1/2 -rotate-3 rounded-[42px] bg-linear-to-br from-sky-900/15 to-cyan-500/10 blur-[2px] dark:from-cyan-200/15 dark:to-sky-300/10"
-	></div>
-
+<main class="relative min-h-screen overflow-hidden sm:px-6 sm:py-8 [@media(max-height:800px)]:py-3">
+	<!--
 	<div class="absolute right-4 top-4 z-20 flex items-center gap-2 sm:right-6 sm:top-6">
 		<ThemeToggle />
 		<LanguageSwitcher />
 	</div>
+	-->
 
 	<section
 		aria-label="SomnosSuite Login"
 		class="relative mx-auto my-auto grid w-full max-w-6xl items-center gap-6 lg:grid-cols-[1.05fr_minmax(320px,460px)] [@media(max-height:800px)]:gap-4"
 	>
+		<!-- Decorative background -->
+		<div
+			class="pointer-events-none absolute left-[35%] top-1/2 h-192 w-3xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/15 blur-[120px] dark:bg-cyan-300/10"
+		></div>
+
+		<img
+			src={favicon}
+			aria-hidden="true"
+			alt=""
+			class="pointer-events-none absolute left-[35%] top-1/2 h-[80vh] w-[80vh] -translate-x-1/2 -translate-y-1/2 opacity-[0.07] dark:opacity-[0.05]"
+		/>
+		<!-- left-side hero/content section -->
 		<div
 			class="grid content-center gap-4 px-1 py-2 lg:p-6 [@media(max-height:800px)]:gap-2 [@media(max-height:800px)]:py-1"
 		>
 			<p
 				class="m-0 text-xs font-bold uppercase tracking-[0.18em] text-cyan-900 dark:text-cyan-200"
 			>
-				{$LL.login.internalLabel()}
+				{$LL.login.applicationName()}
 			</p>
 			<h1
-				class="m-0 max-w-[19ch] font-serif text-4xl leading-[0.95] text-slate-900 dark:text-slate-100 sm:text-5xl lg:text-6xl [@media(max-height:800px)]:lg:text-5xl"
+				class="m-0 max-w-[19ch] font-serif text-4xl leading-[0.95] text-foreground sm:text-5xl lg:text-6xl [@media(max-height:800px)]:lg:text-5xl"
 			>
 				{$LL.login.headline()}
 			</h1>
-			<p
-				class="m-0 max-w-2xl text-base leading-relaxed text-slate-800 dark:text-slate-200 sm:text-lg"
-			>
+			<p class="m-0 max-w-2xl text-base leading-relaxed text-foreground/75 sm:text-lg">
 				{$LL.login.subline()}
 			</p>
 
 			<ul class="mt-3 grid gap-3">
-				<li class="flex items-center gap-3 text-sm text-slate-800 dark:text-slate-200">
+				<li class="flex items-center gap-3 text-sm text-foreground/75">
 					<span
 						aria-hidden="true"
 						class="h-2.5 w-2.5 shrink-0 rounded-full bg-linear-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
 					></span>
 					<span>{$LL.login.benefitSecure()}</span>
 				</li>
-				<li class="flex items-center gap-3 text-sm text-slate-800 dark:text-slate-200">
+				<li class="flex items-center gap-3 text-sm text-foreground/75">
 					<span
 						aria-hidden="true"
 						class="h-2.5 w-2.5 shrink-0 rounded-full bg-linear-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
 					></span>
 					<span>{$LL.login.benefitDashboards()}</span>
 				</li>
-				<li class="flex items-center gap-3 text-sm text-slate-800 dark:text-slate-200">
+				<li class="flex items-center gap-3 text-sm text-foreground/75">
 					<span
 						aria-hidden="true"
 						class="h-2.5 w-2.5 shrink-0 rounded-full bg-linear-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
@@ -77,11 +82,9 @@
 			</ul>
 		</div>
 
+		<!-- Sign in form -->
 		<div class="grid items-center">
-			<Card
-				aria-label="Sign in form"
-				class="rounded-3xl p-5 shadow-xl backdrop-blur-xl sm:p-7"
-			>
+			<Card aria-label="Sign in form" class="rounded-3xl p-5 sm:p-7">
 				<header>
 					<div class="mb-3 flex items-center justify-between gap-3">
 						<Badge
@@ -91,24 +94,21 @@
 							{$LL.login.envLabel()}
 						</Badge>
 						<Badge
-							class="inline-flex items-center rounded-full bg-slate-800 px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide text-white dark:bg-slate-200 dark:text-slate-950"
+							class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide bg-foreground text-background"
 						>
 							{$LL.login.buildLabel()}
 						</Badge>
 					</div>
-					<h2 class="m-0 font-serif text-4xl text-slate-900 dark:text-slate-100">
+					<h2 class="m-0 font-serif text-4xl text-foreground">
 						{$LL.login.signInHeading()}
 					</h2>
-					<p class="mb-5 mt-1 text-sm text-slate-700 dark:text-slate-300">
+					<p class="mb-5 mt-1 text-sm text-foreground/75">
 						{$LL.login.signInSubline()}
 					</p>
 				</header>
 
 				<form method="post" action="/login" class="grid gap-2.5">
-					<Label
-						for="email"
-						class="text-xs font-bold tracking-wide text-slate-800 dark:text-slate-200"
-					>
+					<Label for="email" class="text-xs font-bold tracking-wide text-foreground/75">
 						{$LL.login.workEmailLabel()}
 					</Label>
 					<Input
@@ -117,7 +117,7 @@
 						type="email"
 						autocomplete="email"
 						placeholder={$LL.login.workEmailPlaceholder()}
-						class="h-11 rounded-xl border border-slate-400 bg-white px-3 text-sm text-slate-950 placeholder:text-slate-600 focus:border-cyan-900 focus:ring-0 dark:border-slate-500 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-300 dark:focus:border-cyan-300"
+						class="h-11 rounded-xl border  border-slate-400 bg-white px-3 text-sm text-slate-950 placeholder:text-slate-600 focus:border-cyan-900 focus:ring-0 dark:border-slate-500 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-300 dark:focus:border-cyan-300"
 					/>
 
 					<Label for="password" class="text-xs font-bold tracking-wide">
@@ -136,7 +136,7 @@
 					<div class="mb-1 mt-1 flex items-center justify-between gap-3">
 						<Label
 							for="remember"
-							class="inline-flex items-center gap-2 text-xs font-semibold text-slate-800 dark:text-slate-200"
+							class="inline-flex items-center gap-2 text-xs font-semibold text-foreground/80"
 						>
 							<Checkbox
 								id="remember"

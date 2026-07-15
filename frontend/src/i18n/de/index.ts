@@ -8,7 +8,7 @@ const de = {
 	},
 	login: {
 		title: 'Anmeldung | SomnosSuite',
-		internalLabel: 'SomnosSuite',
+		applicationName: 'SomnosSuite',
 		headline: 'Kontrollportal für Nutzier-Betäubungsabläufe.',
 		subline:
 			'Erfasse Tiere, Betäubungsgeräte, Betäubungsprüfungen, Ergebnisse und Audit-Metadaten in einem sicheren Dokumentationsbereich.',
