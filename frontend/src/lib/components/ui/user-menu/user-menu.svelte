@@ -74,7 +74,7 @@
 					{#if image}
 						<Avatar.Image src={image} alt={name} />
 					{/if}
-					<Avatar.Fallback>
+					<Avatar.Fallback class="bg-transparent text-foreground">
 						{@const FallbackIcon = fallbackIcon}
 						{#if FallbackIcon}
 							<FallbackIcon />

@@ -16,7 +16,9 @@
 	<title>{$LL.login.title()}</title>
 </svelte:head>
 
-<main class="relative min-h-screen overflow-hidden sm:px-6 sm:py-8 [@media(max-height:800px)]:py-3">
+<main
+	class="relative min-h-screen bg-background overflow-hidden sm:px-6 sm:py-8 [@media(max-height:800px)]:py-3"
+>
 	<!--
 	<div class="absolute right-4 top-4 z-20 flex items-center gap-2 sm:right-6 sm:top-6">
 		<ThemeToggle />
@@ -30,7 +32,7 @@
 	>
 		<!-- Decorative background -->
 		<div
-			class="pointer-events-none absolute left-[35%] top-1/2 h-192 w-3xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-400/15 blur-[120px] dark:bg-cyan-300/10"
+			class="pointer-events-none absolute left-[35%] top-1/2 h-192 w-3xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-[120px] dark:bg-primary/10"
 		></div>
 
 		<img
@@ -43,9 +45,7 @@
 		<div
 			class="grid content-center gap-4 px-1 py-2 lg:p-6 [@media(max-height:800px)]:gap-2 [@media(max-height:800px)]:py-1"
 		>
-			<p
-				class="m-0 text-xs font-bold uppercase tracking-[0.18em] text-cyan-900 dark:text-cyan-200"
-			>
+			<p class="m-0 text-xs font-bold uppercase tracking-[0.18em] text-primary">
 				{$LL.login.applicationName()}
 			</p>
 			<h1
@@ -61,21 +61,21 @@
 				<li class="flex items-center gap-3 text-sm text-foreground/75">
 					<span
 						aria-hidden="true"
-						class="h-2.5 w-2.5 shrink-0 rounded-full bg-linear-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
+						class="h-2.5 w-2.5 shrink-0 rounded-full bg-primary ring-4 ring-primary/20"
 					></span>
 					<span>{$LL.login.benefitSecure()}</span>
 				</li>
 				<li class="flex items-center gap-3 text-sm text-foreground/75">
 					<span
 						aria-hidden="true"
-						class="h-2.5 w-2.5 shrink-0 rounded-full bg-linear-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
+						class="h-2.5 w-2.5 shrink-0 rounded-full bg-primary ring-4 ring-primary/20"
 					></span>
 					<span>{$LL.login.benefitDashboards()}</span>
 				</li>
 				<li class="flex items-center gap-3 text-sm text-foreground/75">
 					<span
 						aria-hidden="true"
-						class="h-2.5 w-2.5 shrink-0 rounded-full bg-linear-to-br from-cyan-400 to-sky-600 ring-4 ring-cyan-300/30 dark:ring-cyan-200/20"
+						class="h-2.5 w-2.5 shrink-0 rounded-full bg-primary ring-4 ring-primary/20"
 					></span>
 					<span>{$LL.login.benefitTriage()}</span>
 				</li>
@@ -84,7 +84,10 @@
 
 		<!-- Sign in form -->
 		<div class="grid items-center">
-			<Card aria-label="Sign in form" class="rounded-3xl p-5 sm:p-7">
+			<Card
+				aria-label="Sign in form"
+				class="rounded-3xl border-border/50 bg-card/65 p-5 shadow-2xl backdrop-blur-xl supports-backdrop-filter:bg-card/55 sm:p-7"
+			>
 				<header>
 					<div class="mb-3 flex items-center justify-between gap-3">
 						<Badge
@@ -94,7 +97,8 @@
 							{$LL.login.envLabel()}
 						</Badge>
 						<Badge
-							class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide bg-foreground text-background"
+							variant="secondary"
+							class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide"
 						>
 							{$LL.login.buildLabel()}
 						</Badge>
@@ -117,10 +121,13 @@
 						type="email"
 						autocomplete="email"
 						placeholder={$LL.login.workEmailPlaceholder()}
-						class="h-11 rounded-xl border  border-slate-400 bg-white px-3 text-sm text-slate-950 placeholder:text-slate-600 focus:border-cyan-900 focus:ring-0 dark:border-slate-500 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-300 dark:focus:border-cyan-300"
+						class="h-11 rounded-xl border-border/70 bg-background/70 px-3 text-sm shadow-sm"
 					/>
 
-					<Label for="password" class="text-xs font-bold tracking-wide">
+					<Label
+						for="password"
+						class="text-xs font-bold tracking-wide text-foreground/75"
+					>
 						{$LL.login.passwordLabel()}
 					</Label>
 					<Input
@@ -130,7 +137,7 @@
 						autocomplete="current-password"
 						placeholder={$LL.login.passwordPlaceholder()}
 						required
-						class="h-11 rounded-xl border border-slate-400 bg-white px-3 text-sm text-slate-950 placeholder:text-slate-600 focus:border-cyan-900 focus:ring-0 dark:border-slate-500 dark:bg-slate-950 dark:text-slate-100 dark:placeholder:text-slate-300 dark:focus:border-cyan-300"
+						class="h-11 rounded-xl border-border/70 bg-background/70 px-3 text-sm shadow-sm"
 					/>
 
 					<div class="mb-1 mt-1 flex items-center justify-between gap-3">
@@ -141,13 +148,13 @@
 							<Checkbox
 								id="remember"
 								name="remember"
-								class="h-4 w-4 rounded border-slate-400 text-cyan-700 accent-cyan-700 focus:ring-cyan-700 dark:border-slate-500 dark:bg-slate-900 dark:focus:ring-cyan-400"
+								class="h-4 w-4 border-border/70"
 							/>
 							<span>{$LL.login.rememberDevice()}</span>
 						</Label>
 						<a
 							href={resolve('/about')}
-							class="text-xs font-semibold text-cyan-900 hover:underline dark:text-cyan-200"
+							class="text-xs font-semibold text-primary hover:text-primary/80 hover:underline"
 						>
 							{$LL.login.forgotPassword()}
 						</a>
@@ -155,7 +162,7 @@
 
 					<Button
 						type="submit"
-						class="mt-1 h-11 rounded-xl bg-linear-to-r from-cyan-700 to-sky-700 text-sm font-bold text-white transition-transform hover:-translate-y-0.5"
+						class="mt-1 h-11 rounded-xl text-sm font-bold shadow-sm transition-transform hover:-translate-y-0.5"
 					>
 						{$LL.login.signInButton()}
 					</Button>
@@ -165,29 +172,33 @@
 					aria-hidden="true"
 					class="my-4 grid grid-cols-[1fr_auto_1fr] items-center gap-3"
 				>
-					<span class="h-px bg-slate-300 dark:bg-slate-700"></span>
+					<span class="h-px bg-border"></span>
 					<p
-						class="m-0 text-[11px] font-bold uppercase tracking-[0.09em] text-slate-700 dark:text-slate-300"
+						class="m-0 text-[11px] font-bold uppercase tracking-[0.09em] text-muted-foreground"
 					>
 						{$LL.login.orLabel()}
 					</p>
-					<span class="h-px bg-slate-300 dark:bg-slate-700"></span>
+					<span class="h-px bg-border"></span>
 				</div>
 
-				<Button type="button" variant="outline" class="h-11 w-full rounded-xl">
+				<Button
+					type="button"
+					variant="outline"
+					class="h-11 w-full rounded-xl bg-background/40"
+				>
 					{$LL.login.ssoButton()}
 				</Button>
 
 				<footer class="mt-4 flex flex-wrap items-center justify-between gap-2">
 					<a
 						href={resolve('/about')}
-						class="text-xs font-semibold text-cyan-900 hover:underline dark:text-cyan-200"
+						class="text-xs font-semibold text-primary hover:text-primary/80 hover:underline"
 					>
 						{$LL.login.needAccess()}
 					</a>
 					<a
 						href={resolve('/about')}
-						class="text-xs font-semibold text-cyan-900 hover:underline dark:text-cyan-200"
+						class="text-xs font-semibold text-primary hover:text-primary/80 hover:underline"
 					>
 						{$LL.login.systemStatus()}
 					</a>
