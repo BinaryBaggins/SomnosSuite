@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import LL from '../../i18n/i18n-svelte';
+	import { LL } from '$i18n/i18n-svelte';
 
 	import { Card } from '$lib/components/ui/card';
 	import { Button } from '$lib/components/ui/button';
