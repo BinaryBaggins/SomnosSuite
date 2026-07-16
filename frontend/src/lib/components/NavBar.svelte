@@ -52,7 +52,8 @@
 				<a class={navLinkClass} href={resolve('/about')} data-twe-nav-link-ref>About</a>
 			</li>
 			<li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
-				<a class={navLinkClass} href={resolve('/login')} data-twe-nav-link-ref>Login</a>
+				<a class={navLinkClass} href={resolve('/auth/login')} data-twe-nav-link-ref>Login</a
+				>
 			</li>
 			<li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
 				<a class={navLinkClass} href={resolve('/app/station')} data-twe-nav-link-ref
