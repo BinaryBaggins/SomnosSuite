@@ -46,7 +46,7 @@
 <main class="min-h-screen bg-background p-6 text-foreground">
 	<div class="mx-auto grid max-w-4xl gap-6">
 		<header class="rounded-3xl border border-border bg-card p-6 text-card-foreground shadow-sm">
-			<p class="text-sm font-bold uppercase tracking-wider text-primary">Station</p>
+			<p class="text-sm font-bold tracking-wider text-primary uppercase">Station</p>
 
 			<h1 class="mt-2 text-4xl font-bold">
 				{station.name}

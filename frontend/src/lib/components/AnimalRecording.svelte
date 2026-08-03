@@ -44,7 +44,7 @@
 
 <main class="grid min-h-screen gap-6 bg-background p-6 text-foreground">
 	<header class="rounded-3xl border border-border bg-card p-6 text-card-foreground shadow-sm">
-		<p class="text-sm font-bold uppercase tracking-wide text-primary">Station</p>
+		<p class="text-sm font-bold tracking-wide text-primary uppercase">Station</p>
 
 		<h1 class="text-4xl font-bold">
 			{productionSession.station}
@@ -94,7 +94,7 @@
 
 			<button
 				onclick={() => recordOutcome('Bad')}
-				class="h-32 rounded-3xl bg-destructive text-4xl font-bold text-destructive-foreground shadow-sm"
+				class="text-destructive-foreground h-32 rounded-3xl bg-destructive text-4xl font-bold shadow-sm"
 			>
 				BAD
 			</button>

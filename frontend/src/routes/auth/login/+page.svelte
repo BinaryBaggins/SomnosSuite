@@ -17,7 +17,7 @@
 </svelte:head>
 
 <main
-	class="relative min-h-screen bg-background overflow-hidden sm:px-6 sm:py-8 [@media(max-height:800px)]:py-3"
+	class="relative min-h-screen overflow-hidden bg-background sm:px-6 sm:py-8 [@media(max-height:800px)]:py-3"
 >
 	<!--
 	<div class="absolute right-4 top-4 z-20 flex items-center gap-2 sm:right-6 sm:top-6">
@@ -32,20 +32,20 @@
 	>
 		<!-- Decorative background -->
 		<div
-			class="pointer-events-none absolute left-[35%] top-1/2 h-192 w-3xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-[120px] dark:bg-primary/10"
+			class="pointer-events-none absolute top-1/2 left-[35%] h-192 w-3xl -translate-x-1/2 -translate-y-1/2 rounded-full bg-primary/15 blur-[120px] dark:bg-primary/10"
 		></div>
 
 		<img
 			src={favicon}
 			aria-hidden="true"
 			alt=""
-			class="pointer-events-none absolute left-[35%] top-1/2 h-[80vh] w-[80vh] -translate-x-1/2 -translate-y-1/2 opacity-[0.07] dark:opacity-[0.05]"
+			class="pointer-events-none absolute top-1/2 left-[35%] h-[80vh] w-[80vh] -translate-x-1/2 -translate-y-1/2 opacity-[0.07] dark:opacity-[0.05]"
 		/>
 		<!-- left-side hero/content section -->
 		<div
 			class="grid content-center gap-4 px-1 py-2 lg:p-6 [@media(max-height:800px)]:gap-2 [@media(max-height:800px)]:py-1"
 		>
-			<p class="m-0 text-xs font-bold uppercase tracking-[0.18em] text-primary">
+			<p class="m-0 text-xs font-bold tracking-[0.18em] text-primary uppercase">
 				{$LL.login.applicationName()}
 			</p>
 			<h1
@@ -92,13 +92,13 @@
 					<div class="mb-3 flex items-center justify-between gap-3">
 						<Badge
 							title="Current environment"
-							class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide"
+							class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-bold tracking-wide uppercase"
 						>
 							{$LL.login.envLabel()}
 						</Badge>
 						<Badge
 							variant="secondary"
-							class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-bold uppercase tracking-wide"
+							class="inline-flex items-center rounded-full px-2.5 py-1 text-[11px] font-bold tracking-wide uppercase"
 						>
 							{$LL.login.buildLabel()}
 						</Badge>
@@ -106,7 +106,7 @@
 					<h2 class="m-0 font-serif text-4xl text-foreground">
 						{$LL.login.signInHeading()}
 					</h2>
-					<p class="mb-5 mt-1 text-sm text-foreground/75">
+					<p class="mt-1 mb-5 text-sm text-foreground/75">
 						{$LL.login.signInSubline()}
 					</p>
 				</header>
@@ -140,7 +140,7 @@
 						class="h-11 rounded-xl border-border/70 bg-background/70 px-3 text-sm shadow-sm"
 					/>
 
-					<div class="mb-1 mt-1 flex items-center justify-between gap-3">
+					<div class="mt-1 mb-1 flex items-center justify-between gap-3">
 						<Label
 							for="remember"
 							class="inline-flex items-center gap-2 text-xs font-semibold text-foreground/80"
@@ -174,7 +174,7 @@
 				>
 					<span class="h-px bg-border"></span>
 					<p
-						class="m-0 text-[11px] font-bold uppercase tracking-[0.09em] text-muted-foreground"
+						class="m-0 text-[11px] font-bold tracking-[0.09em] text-muted-foreground uppercase"
 					>
 						{$LL.login.orLabel()}
 					</p>
